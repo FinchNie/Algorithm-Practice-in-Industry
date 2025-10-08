@@ -89,7 +89,7 @@ def init_model_client():
     model_type = os.environ.get("MODEL_TYPE", "DeepSeek")
     if model_type == "DeepSeek":
         api_key = os.environ.get("DEEPSEEK_API_KEY", None)
-        base_url = "https://api.deepseek.com"
+        base_url = "https://api.siliconflow.cn/v1"
         return DeepSeekClient(api_key=api_key, base_url=base_url)
     elif model_type == "Caiyun":
         api_key = os.environ.get("CAIYUN_TOKEN", None)
