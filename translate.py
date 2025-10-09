@@ -38,7 +38,8 @@ class DeepSeekClient(ModelClient):
 
     def call(self, source, system_prompt=None, temperature=1.3):
         response = self.client.chat.completions.create(
-            model="deepseek-chat",
+            # model="deepseek-chat",
+            model="Qwen/Qwen2.5-72B-Instruct",
             messages=[
                 system_prompt,
                 {"role": "user", "content": source}
